@@ -117,4 +117,17 @@ output2.textContent = JSON.stringify(output);
 		</gradio-lite>
 	</body>
 </html>
+<html>
+	<head>
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+		import gradio as gr
+		def fn1(txt1):
+			return txt1+"hey"
+		gr.Interface(fn1,"text","text").launch()
+		</gradio-lite>
+	</body>
+</html>
 
