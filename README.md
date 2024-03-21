@@ -89,7 +89,6 @@ output2.textContent = JSON.stringify(output);
     </body>
 </html>
 <iframe src="https://sohrabia.github.io"></iframe>
-<head>
 <html>
    <title>Your Name</title>
 	<h3>Your CelSci</h3>
