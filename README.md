@@ -52,7 +52,6 @@ window.onload = function () {
     </div>
 </body>
 </html>
-<!DOCTYPE html>
 <html>
 	<head>
       <script type="module">
@@ -90,4 +89,32 @@ output2.textContent = JSON.stringify(output);
     </body>
 </html>
 <iframe src="https://sohrabia.github.io"></iframe>
+<head>
+<html>
+   <title>Your Name</title>
+	<h3>Your CelSci</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["Video 1", "Video 2", "Video 3", "Video 4", "Video 5"], 
+					  "Views" : [500, 2000, 540, 300, 200], 
+					  "Duration" : [30, 20, 70, 35, 22]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
 
